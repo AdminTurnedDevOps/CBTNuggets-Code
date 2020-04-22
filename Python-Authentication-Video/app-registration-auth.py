@@ -25,3 +25,4 @@ if __name__ == '__main__':
 else:
     print('Running as imported library...')
     app_registration_auth (clientID, tenantID, subscriptionID)
+
