@@ -1,3 +1,6 @@
+Install-Module Az
+Import-Module Az
+
 param(
     [string]$name,
     [string]$resourceGroupName,
