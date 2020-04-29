@@ -1,5 +1,5 @@
-Install-Module Az
-Import-Module Az
+Install-Module Az -Force
+Import-Module Az -Force
 
 param(
     [string]$name,
