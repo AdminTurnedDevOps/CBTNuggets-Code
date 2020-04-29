@@ -14,7 +14,7 @@ jobs:
         name: ['cbtaks']
         resourceGroupName: ['CBTAzure']
         location: ['eastus']
-        kubernetesVersion: ['1.6.7']
+        kubernetesVersion: ['1.16.7']
         nodeCount: [1]
 
     steps:
