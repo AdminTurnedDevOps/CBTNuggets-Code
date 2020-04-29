@@ -16,5 +16,3 @@ $NewAZParams = @{
 }
 
 New-AzAks @NewAZParams
-
-#test
