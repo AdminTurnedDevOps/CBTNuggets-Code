@@ -1,7 +1,15 @@
 AKS cluster that's connected to ACI:
 
 ## Authentication
-For the creation of AKS, Terraform will be used. With using Terraform, it will need an authentication method. To use authentication, 
+For the creation of AKS, Terraform will be used. With using Terraform, it will need an authentication method. To use authentication, you will create an app registration.
+
+The app registration will have a client ID and you will need to create a secret.
+
+## Using secrets
+An Azure Key Vault will be created to store the client ID and the client secret, which will be used in the CICD pipeline.
+
+## Storage
+The Terraform state needs to be stored in a storage account. You will use AZ CLI to create the storage account.
 
 1. PowerShell and Azure CLI to create an AKS cluster
 2. PowerShell creates burst instances from AKS to ACI by deploying the ACI connector. This is for your Kubernetes cluster to spin up containers within ACI rather than on pre-provisioned virtual machines (worker nodes) (https://docs.microsoft.com/en-us/samples/azure-samples/virtual-kubelet-aci-burst/bursting-from-aks-to-aci-with-the-virtual-kubelet/)
