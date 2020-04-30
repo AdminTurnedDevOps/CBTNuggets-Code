@@ -26,22 +26,4 @@ jobs:
     
     - name: Run a one-line script
       run: |
-        param(
-          [string]$name = 'cbtaks',
-          [string]$resourceGroupName = "CBTAzure",
-          [string]$location = "eastus",
-          [string]$kubernetesVersion = "1.16.7",
-          [int]$nodeCount = 1
-      )
-      Install-Module Az -Force
-      Import-Module Az -Force
-      $NewAZParams = @{
-          'Name'              = $name
-          'ResourceGroupName' = $resourceGroupName
-          'location'          = $location
-          'KubernetesVersion' = $kubernetesVersion
-          'NodeCount'         = $nodeCount
-          'Force'             = $true
-      }
-      New-AzAks @NewAZParams
-#        ./PowerShell-For-DevOps-Automation/AKS-And-ACI\New-AKSCluster.ps1  -name ${{ matrix.name }} -resourceGroupName ${{ matrix.resourceGroupName }} -location ${{ matrix.location }} -kubernetesVersion ${{ matrix.kubernetesVersion }} -nodeCount ${{ matrix.nodeCount }}
+        ./PowerShell-For-DevOps-Automation/AKS-And-ACI/New-AKSCluster.ps1  -name ${{ matrix.name }} -resourceGroupName ${{ matrix.resourceGroupName }} -location ${{ matrix.location }} -kubernetesVersion ${{ matrix.kubernetesVersion }} -nodeCount ${{ matrix.nodeCount }}
