@@ -7,13 +7,9 @@ param(
     [string]$SshKeyValue
 )
 
-$NewAZParams = @{
-    'Name'              = $name
-    'ResourceGroupName' = $resourceGroupName
-    'location'          = $location
-    'KubernetesVersion' = $kubernetesVersion
-    'NodeCount'         = $nodeCount
-    'Force'             = $true
-}
-
-New-AzAks @NewAZParams
+az aks create -g $resourceGroupName `
+              -n $name
+              -l $location
+              --ssh-key-value $SshKeyValue
+              --node-count $nodeCount
+              --kubernetes-version $kubernetesVersion
