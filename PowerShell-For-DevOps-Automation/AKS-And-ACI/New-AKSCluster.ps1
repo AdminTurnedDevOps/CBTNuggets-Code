@@ -10,6 +10,6 @@ param(
 az aks create -g $resourceGroupName `
               -n $name `
               -l $location `
-              --ssh-key-value $SshKeyValue `
+              --generate-ssh-keys `
               --node-count $nodeCount `
               --kubernetes-version $kubernetesVersion
