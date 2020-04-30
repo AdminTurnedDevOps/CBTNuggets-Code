@@ -4,7 +4,6 @@ param(
     [string]$location,
     [string]$kubernetesVersion,
     [int]$nodeCount = 1,
-    [string]$SshKeyValue
 )
 
 az aks create -g $resourceGroupName `

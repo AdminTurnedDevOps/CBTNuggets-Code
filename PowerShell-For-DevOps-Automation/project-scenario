@@ -7,5 +7,5 @@ ACI with non-ephemeral container instances:
 AKS cluster that's connected to ACI:
 
 1. PowerShell and Azure CLI to create an AKS cluster
-2. PowerShell creates burst instances from AKS to ACI by deploying the ACI connector. This is for your Kubernetes cluster to spin up containers within ACI rather than on pre-provisioned virtual machines (worker nodes)
-3. PowerShell connects a storage account to ACI (https://docs.microsoft.com/en-us/samples/azure-samples/virtual-kubelet-aci-burst/bursting-from-aks-to-aci-with-the-virtual-kubelet/)
+2. PowerShell creates burst instances from AKS to ACI by deploying the ACI connector. This is for your Kubernetes cluster to spin up containers within ACI rather than on pre-provisioned virtual machines (worker nodes) (https://docs.microsoft.com/en-us/samples/azure-samples/virtual-kubelet-aci-burst/bursting-from-aks-to-aci-with-the-virtual-kubelet/)
+3. PowerShell connects a storage account to ACI 
