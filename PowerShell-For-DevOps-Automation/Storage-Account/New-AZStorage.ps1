@@ -9,4 +9,4 @@ az storage account create -n $name `
                           -g $resourceGroupName `
                           - l $location
 
-az stroage container create -n $container
+az storage container create -n $container
