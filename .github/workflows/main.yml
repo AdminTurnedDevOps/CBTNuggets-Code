@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: windows-2019
     strategy:
       matrix:
         name: ['cbtaks']
@@ -24,7 +24,7 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
     
-#    - name: Run a one-line script
-#      run: .\PowerShell-For-DevOps-Automation\AKS-And-ACI\New-AKSCluster.ps1  -name ${{ matrix.name }} -resourceGroupName ${{ matrix.resourceGroupName }} -location ${{ matrix.location }} -kubernetesVersion ${{ matrix.kubernetesVersion }} -nodeCount ${{ matrix.nodeCount }}
-#      shell: pwsh
+    - name: Run a one-line script
+      run: .\PowerShell-For-DevOps-Automation\AKS-And-ACI\New-AKSCluster.ps1  -name ${{ matrix.name }} -resourceGroupName ${{ matrix.resourceGroupName }} -location ${{ matrix.location }} -kubernetesVersion ${{ matrix.kubernetesVersion }} -nodeCount ${{ matrix.nodeCount }}
+      shell: pwsh
 
