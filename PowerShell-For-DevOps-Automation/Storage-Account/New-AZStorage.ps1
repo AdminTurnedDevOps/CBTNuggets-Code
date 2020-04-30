@@ -1,11 +1,12 @@
 param(
     [string]$name,
     [string]$resourceGroupName,
-    [string]$location
+    [string]$location,
+    [string]$container
 )
 
 az storage account create -n $name `
                           -g $resourceGroupName `
                           - l $location
 
-az stroage container create -n $($name | 'container')
+az stroage container create -n $container
