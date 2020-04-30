@@ -29,6 +29,6 @@ jobs:
 #      shell: pwsh
 
     - name: Run a one-line script
-      run: .\PowerShell-For-DevOps-Automation\AKS-And-ACI\New-AKSCluster.ps1
+      run: ./PowerShell-For-DevOps-Automation/AKS-And-ACI/New-AKSCluster.ps1
       shell: pwsh
 
