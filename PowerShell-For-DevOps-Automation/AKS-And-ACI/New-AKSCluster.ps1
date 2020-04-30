@@ -1,13 +1,14 @@
-Install-Module Az -Force
-Import-Module Az -Force
-
 param(
-    [string]$name = "cbtaks",
+    [string]$name = 'cbtaks',
     [string]$resourceGroupName = "CBTAzure",
     [string]$location = "eastus",
     [string]$kubernetesVersion = "1.16.7",
     [int]$nodeCount = 1
 )
+
+Install-Module Az -Force
+Import-Module Az -Force
+
 
 $NewAZParams = @{
     'Name'              = $name
