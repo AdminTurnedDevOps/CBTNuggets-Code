@@ -10,3 +10,4 @@ az storage account create -n $name `
                           -l $location
 
 az storage container create -n $container
+                            --account-name $name
