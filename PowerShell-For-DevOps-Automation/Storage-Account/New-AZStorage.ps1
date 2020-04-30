@@ -7,6 +7,6 @@ param(
 
 az storage account create -n $name `
                           -g $resourceGroupName `
-                          - l $location
+                          -l $location
 
 az storage container create -n $container
