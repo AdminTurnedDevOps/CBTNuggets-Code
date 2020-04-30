@@ -3,7 +3,7 @@ param(
     [string]$resourceGroupName,
     [string]$location,
     [string]$kubernetesVersion,
-    [int]$nodeCount = 1,
+    [int]$nodeCount
 )
 
 az aks create -g $resourceGroupName `
