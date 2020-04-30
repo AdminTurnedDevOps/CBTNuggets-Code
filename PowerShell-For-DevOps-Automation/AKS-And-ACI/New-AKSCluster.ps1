@@ -6,6 +6,7 @@ param(
     [int]$nodeCount = 1
 )
 
+Uninstall-AzureRm
 Install-Module Az -Force
 Import-Module Az -Force
 
