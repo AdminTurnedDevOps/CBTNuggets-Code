@@ -12,4 +12,4 @@ az aks create -g $resourceGroupName `
               -l $location `
               --ssh-key-value $SshKeyValue `
               --node-count $nodeCount `
-              --kubernetes-version $kubernetesVersion `
+              --kubernetes-version $kubernetesVersion
