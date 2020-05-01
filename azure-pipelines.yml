@@ -17,8 +17,14 @@ steps:
     scriptLocation: 'scriptPath'
     scriptPath: 'PowerShell-For-DevOps-Automation/Storage-Account/New-AZStorage.ps1'
     arguments: '-name $(name) -resourceGroupName $(resourceGroupName) -location $(location) -container $(container)'
+
 - task: AzureKeyVault@1
   inputs:
-    azureSubscription: 'Mike-Pay-As-You-Go (220284d2-6a19-4781-87f8-5c564ec4fec9)'
+    azureSubscription: 'Mike-Pay-As-You-Go(1)(220284d2-6a19-4781-87f8-5c564ec4fec9)'
     KeyVaultName: 'sp-keyvault-cbtnuggets'
     SecretsFilter: 'AKSClientID'
+- task: AzureKeyVault@1
+  inputs:
+    azureSubscription: 'Mike-Pay-As-You-Go(220284d2-6a19-4781-87f8-5c564ec4fec9)'
+    KeyVaultName: 'sp-keyvault-cbtnuggets'
+    SecretsFilter: 'AKSClientSecret'
