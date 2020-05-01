@@ -1,7 +1,7 @@
 terraform {
   backend "azurerm" {
     resource_group_name = "CBTAzure"
-    storage_account_name = "cbtnuggets92"
+    storage_account_name = "cbtstorage19921"
     container_name = "tfstate"
     key = "terraform.state"
   }
