@@ -10,7 +10,7 @@ steps:
     azureSubscription: 'Mike-Pay-As-You-Go (220284d2-6a19-4781-87f8-5c564ec4fec9)'
     scriptType: 'pscore'
     scriptLocation: 'scriptPath'
-    scriptPath: 'PowerShell-For-DevOps-Automation/Storage-Account/New-AZStorage.ps1'
+    scriptPath: 'Advanced-PowerShell/Storage-Account/New-AZStorage.ps1'
     arguments: '-name $(name) -resourceGroupName $(resourceGroupName) -location $(location) -container $(container)'
 
 - task: AzureKeyVault@1
@@ -30,14 +30,14 @@ steps:
     azureSubscription: 'Mike-Pay-As-You-Go (220284d2-6a19-4781-87f8-5c564ec4fec9)'
     scriptType: 'pscore'
     scriptLocation: 'scriptPath'
-    scriptPath: 'PowerShell-For-DevOps-Automation/Storage-Account/New-AZStorage.ps1'
+    scriptPath: 'Advanced-PowerShell/Storage-Account/New-AZStorage.ps1'
     arguments: '-name $(name) -resourceGroupName $(resourceGroupName) -location $(location) -container $(container)'
 
 - task: TerraformTaskV1@0
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: 'PowerShell-For-DevOps-Automation/AKS-And-ACI/aks-terraform'
+    workingDirectory: 'Advanced-PowerShell/AKS-And-ACI/aks-terraform'
     backendServiceArm: 'Mike-Pay-As-You-Go (220284d2-6a19-4781-87f8-5c564ec4fec9)'
     backendAzureRmResourceGroupName: 'CBTAzure'
     backendAzureRmStorageAccountName: '$(name)'
@@ -48,5 +48,5 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'apply'
-    workingDirectory: 'PowerShell-For-DevOps-Automation/AKS-And-ACI/aks-terraform'
+    workingDirectory: 'Advanced-PowerShell/AKS-And-ACI/aks-terraform'
     environmentServiceNameAzureRM: 'Mike-Pay-As-You-Go (220284d2-6a19-4781-87f8-5c564ec4fec9)'
