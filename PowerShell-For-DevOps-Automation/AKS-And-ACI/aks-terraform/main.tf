@@ -1,9 +1,9 @@
 terraform {
   backend "azurerm" {
-    resource_group_name = "CBTAzure"
+    resource_group_name  = "CBTAzure"
     storage_account_name = "cbtstorage19921"
-    container_name = "tfstate"
-    key = "terraform.state"
+    container_name       = "tfstate"
+    key                  = "terraform.state"
   }
 }
 
@@ -29,10 +29,17 @@ resource "azurerm_kubernetes_cluster" "CBTAKS" {
   dns_prefix          = "cbtdns"
 
   default_node_pool {
-    name = "default"
+    name       = "default"
     node_count = 1
-    vm_size = "Standard_D2_v2"
+    vm_size    = "Standard_D2_v2"
   }
+
+  addon_profile {
+    aci_connector_linux {
+      enabled = true
+    }
+  }
+
   service_principal {
     client_id     = "${data.azurerm_key_vault_secret.keyVaultClientID.value}"
     client_secret = "${data.azurerm_key_vault_secret.keyVaultClientSecret.value}"
