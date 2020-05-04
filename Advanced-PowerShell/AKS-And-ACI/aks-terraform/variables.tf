@@ -17,3 +17,7 @@ variable "location" {
     type = string
     description = "Region"
 }
+
+variable "subnetName" {
+  type = string
+}
