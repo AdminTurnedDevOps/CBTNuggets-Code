@@ -8,11 +8,6 @@ param(
 az aks get-credentials -n $aksClusterName `
                       --resource-group $resourceGroupName
 
-#az aks install-connector --name 'terraformlive' `
-#                         --resource-group $resourceGroupName `
-#                         --connector-name $connectorName `
-#                         --os-type Both
-
 az aks enable-addons --resource-group $resourceGroupName `
                      --name $aksClusterName `
                      --addons virtual-node `
