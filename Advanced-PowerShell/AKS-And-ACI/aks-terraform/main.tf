@@ -2,7 +2,7 @@ terraform {
   backend "azurerm" {
     resource_group_name  = "CBTAzure"
     storage_account_name = "cbtstorage19921"
-    container_name       = "tfstate"
+    container_name       = "cbtcontainer"
     key                  = "terraform.state"
   }
 }
@@ -32,6 +32,11 @@ resource "azurerm_kubernetes_cluster" "CBTAKS" {
     name       = "default"
     node_count = 1
     vm_size    = "Standard_D2_v2"
+  }
+
+  network_profile {
+    network_plugin = "azure"
+    network_policy = "azure"
   }
 
   addon_profile {
