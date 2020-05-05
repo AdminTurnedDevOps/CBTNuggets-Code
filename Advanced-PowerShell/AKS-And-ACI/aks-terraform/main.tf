@@ -34,12 +34,11 @@ resource "azurerm_kubernetes_cluster" "CBTAKS" {
     vm_size    = "Standard_D2_v2"
   }
 
-  #addon_profile {
-  #  aci_connector_linux {
-  #    enabled = true
-  #    subnet_name = var.subnetName
-  #  }
-  #}
+    addon_profile {
+        oms_agent {
+        enabled                    = true
+        }
+    }
 
   service_principal {
     client_id     = "${data.azurerm_key_vault_secret.keyVaultClientID.value}"
