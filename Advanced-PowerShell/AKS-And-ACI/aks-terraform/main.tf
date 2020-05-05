@@ -34,6 +34,11 @@ resource "azurerm_kubernetes_cluster" "CBTAKS" {
     vm_size    = "Standard_D2_v2"
   }
 
+  network_profile {
+    network_plugin = "azure"
+    network_policy = "azure"
+  }
+
     addon_profile {
         oms_agent {
         enabled                    = true

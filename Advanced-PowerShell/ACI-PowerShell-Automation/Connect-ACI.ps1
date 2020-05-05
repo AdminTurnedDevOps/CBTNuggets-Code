@@ -1,7 +1,8 @@
 param(
     [string]$aksClusterName = 'cbtnuggs92',
     [string]$resourceGroupName = 'CBTAzure',
-    [string]$connectorName = 'aciaks'
+    [string]$connectorName = 'aciaks',
+    [string]$subnetName = 'aci'
 )
 
 az aks get-credentials -n $aksClusterName `
@@ -12,6 +13,7 @@ az aks get-credentials -n $aksClusterName `
 #                         --connector-name $connectorName `
 #                         --os-type Both
 
-az aks install-connector --resource-group $resourceGroupName `
-                         -n $aksClusterName `
-                         --connector-name virtual-kubelet
+az aks enable-addons --resource-group $resourceGroupName `
+                     --name $aksClusterName `
+                     --addons virtual-node `
+                     --subnet-name $subnetName 
