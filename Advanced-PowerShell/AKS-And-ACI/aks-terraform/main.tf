@@ -39,11 +39,17 @@ resource "azurerm_kubernetes_cluster" "CBTAKS" {
     network_policy = "azure"
   }
 
-#    addon_profile {
-#        oms_agent {
-#        enabled                    = true
-#       }
-#    }
+  addon_profile {
+    aci_connector_linux {
+      enabled = true
+    }
+  }
+
+  #    addon_profile {
+  #        oms_agent {
+  #        enabled                    = true
+  #       }
+  #    }
 
   service_principal {
     client_id     = "${data.azurerm_key_vault_secret.keyVaultClientID.value}"
