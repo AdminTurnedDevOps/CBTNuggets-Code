@@ -42,6 +42,7 @@ resource "azurerm_kubernetes_cluster" "CBTAKS" {
   addon_profile {
     aci_connector_linux {
       enabled = true
+      subnet_name = "aci"
     }
   }
 
