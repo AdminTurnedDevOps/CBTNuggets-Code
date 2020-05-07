@@ -13,3 +13,6 @@ az webapp list --output yaml
 
 # Table output
 az webapp list --output table
+
+# Output combining AZ CLI and PowerShell
+az webapp list --output json | ConvertFrom-Json | Select Name, Location, State
