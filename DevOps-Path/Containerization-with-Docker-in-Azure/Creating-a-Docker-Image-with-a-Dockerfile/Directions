@@ -1,0 +1,11 @@
+Each instruction creates one layer:
+
+FROM creates a layer from the ubuntu:18.04 Docker image.
+COPY adds files from your Docker client’s current directory.
+RUN builds your application with make.
+CMD specifies what command to run within the container.
+
+** To Build a Docker File **
+docker build .
+
+^ Ensure that is run from the directory that contains the Dockerfile
