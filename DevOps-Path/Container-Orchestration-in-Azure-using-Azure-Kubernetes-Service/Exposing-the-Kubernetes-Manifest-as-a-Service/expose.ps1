@@ -1,0 +1,1 @@
+kubectl expose deployment python-web-app-deployment --type=LoadBalancer
