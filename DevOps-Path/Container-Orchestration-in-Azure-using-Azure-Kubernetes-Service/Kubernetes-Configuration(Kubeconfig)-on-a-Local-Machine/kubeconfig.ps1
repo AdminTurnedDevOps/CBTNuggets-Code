@@ -33,8 +33,8 @@ function kubeconfig {
     process {
         try {
             az aks get-credentials --name $name `
-                                  --resource-group $resourceGroupName `
-                                  --admin
+                                   --resource-group $resourceGroupName `
+                                   --admin
         }
 
         catch {

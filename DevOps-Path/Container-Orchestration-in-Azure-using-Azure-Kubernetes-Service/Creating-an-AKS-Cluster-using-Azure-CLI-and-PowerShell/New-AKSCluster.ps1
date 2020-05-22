@@ -56,7 +56,6 @@ function New-AKSCluster {
                 --resource-group $resourceGroupName `
                 --network-plugin 'azure' `
                 --location $region `
-                --outbound-type 'loadBalancer' `
                 --node-count $nodeCount `
                 --kubernetes-version $kubernetesVersion `
                 --load-balancer-sku standard `

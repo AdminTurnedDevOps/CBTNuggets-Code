@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-web-app-deployment
+  labels:
+    app: pythonwebapp
+    language: python
+    deployment: aks
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pythonwebapp
+      language: python
+      deployment: aks
+  template:
+    metadata:
+      labels:
+        app: pythonwebapp
+        language: python
+        deployment: aks
+    spec:
+      containers:
+        - name: python-web-app
+          image: cbtacr92.azurecr.io/pythonwebapp:latest
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          command: [ "/bin/bash", "-c", "--" ]
+          args: [ "while true; do sleep 30; done;" ]
+          ports:
+            - containerPort: 5000
