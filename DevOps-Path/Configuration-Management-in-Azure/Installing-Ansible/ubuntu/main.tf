@@ -5,7 +5,7 @@ provider "azurerm" {
 
 
 resource "azurerm_virtual_machine" "main" {
-  count                 = 1
+  count                 = 3
   name                  = "ansiblehost-${count.index}"
   location              = var.location
   resource_group_name   = var.resourceGroup
