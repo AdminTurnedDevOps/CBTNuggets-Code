@@ -18,13 +18,6 @@
       name: mysql-server
       state: present
 
-  - name: copy cnf
-    copy: 
-      src: my.cnf
-      dest: ~/.my.cnf
-      mode: 0644
-      remote_src: yes
-
   - name: MySQL 
     mysql_db:
       login_user: "${{ mysql_user }}"
