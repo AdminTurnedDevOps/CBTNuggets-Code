@@ -5,9 +5,8 @@
 - hosts: sqlserver01
   become: true
   vars:
-    mysql_user: cbt
+    mysql_user: root
     mysql_password: root
-    root_password: W3lcome12!@
 
   tasks:
   - name: Install pymysql
@@ -27,7 +26,7 @@
   - name: MySQL 
     mysql_db:
       login_user: "${{ mysql_user }}"
-      #login_password: "${{ mysql_password }}"
+      login_password: "${{ mysql_password }}"
       name: cbtdata
       state: present
 
