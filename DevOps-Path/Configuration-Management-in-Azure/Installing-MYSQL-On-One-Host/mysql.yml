@@ -10,13 +10,13 @@
     mysql_root_password_update: false
 
   tasks:
-    - name: Install pymysql
-      shell: apt install python-pymysql
+  - name: Install pymysql
+    shell: apt install python-pymysql
 
-    - name: Install MySQL
-      shell: apt install mysql-server
-      
-      mysql_db:
-        name: cbtdata
-        config_file: ~/.my.cnf
-        state: present
+  - name: Install MySQL
+    shell: apt install mysql-server
+
+  - name: MySQL 
+    mysql_db:
+      name: cbtdata
+      state: present
