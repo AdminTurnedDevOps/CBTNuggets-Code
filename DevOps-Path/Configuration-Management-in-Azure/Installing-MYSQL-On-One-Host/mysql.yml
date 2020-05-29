@@ -27,7 +27,7 @@
   - name: MySQL 
     mysql_db:
       login_user: "${{ mysql_user }}"
-      login_password: "${{ mysql_password }}"
+      #login_password: "${{ mysql_password }}"
       name: cbtdata
       state: present
 
