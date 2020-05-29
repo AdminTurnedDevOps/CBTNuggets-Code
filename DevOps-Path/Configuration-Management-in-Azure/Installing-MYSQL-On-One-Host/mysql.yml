@@ -5,7 +5,6 @@
 - hosts: sqlserver01
   become: true
   vars:
-    mysql_user_home: /root
     mysql_user_name: cbt
     mysql_user_password: root
     mysql_root_password_update: false
@@ -15,8 +14,8 @@
       shell: apt install python-pymysql
 
       mysql_user:
-        name: cbt 
-        password: demo
+        name: "${{ mysql_user_name }}"
+        password: "${{ mysql_user_password }}"
 
       mysql_root_password: Password123!
       mysql_db:
