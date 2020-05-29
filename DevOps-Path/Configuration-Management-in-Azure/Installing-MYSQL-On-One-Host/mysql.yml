@@ -21,7 +21,7 @@
       state: present
   
   - name: Configure MySQL users
-    mysql_users:
+    mysql_user:
       name: "${{ mysql_user }}"
       host: "%"
       password: "${{ mysql_password }}"
