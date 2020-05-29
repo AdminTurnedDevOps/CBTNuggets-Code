@@ -5,9 +5,8 @@
 - hosts: sqlserver01
   become: true
   vars:
-    mysql_user_name: cbt
-    mysql_user_password: root
-    mysql_root_password_update: false
+    mysql_user: cbt
+    mysql_password: root
 
   tasks:
   - name: Install pymysql
@@ -20,3 +19,10 @@
     mysql_db:
       name: cbtdata
       state: present
+  
+  - name: Configure MySQL users
+    mysql_users:
+    - name: "${{ mysql_user }}"
+      host: "%"
+      password: "${{ mysql_password }}"
+      priv: "example_db.*:ALL"
