@@ -20,7 +20,7 @@
 
   - name: copy cnf
     copy: 
-      src: .my.cnf
+      src: my.cnf
       dest: ~/.my.cnf
       mode: 0644
       remote_src: yes
