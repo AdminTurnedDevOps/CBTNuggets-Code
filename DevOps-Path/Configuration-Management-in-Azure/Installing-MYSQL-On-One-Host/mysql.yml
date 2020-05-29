@@ -22,7 +22,7 @@
   
   - name: Configure MySQL users
     mysql_users:
-    - name: "${{ mysql_user }}"
+      name: "${{ mysql_user }}"
       host: "%"
       password: "${{ mysql_password }}"
       priv: "example_db.*:ALL"
