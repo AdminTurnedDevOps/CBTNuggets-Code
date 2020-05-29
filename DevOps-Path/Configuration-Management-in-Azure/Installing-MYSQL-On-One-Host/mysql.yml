@@ -19,7 +19,11 @@
       state: present
 
   - name: copy cnf
-    copy: src=.my.cnf dest=~/.my.cnf mode=0644
+    copy: 
+      src: my.cnf
+      dest: ~/.my.cnf
+      mode: 0644
+      remote_src: yes
 
   - name: MySQL 
     mysql_db:
