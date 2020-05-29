@@ -15,7 +15,10 @@
       shell: apt install python-pymysql
 
     - name: Create a new database called cbtdata
-      mysql_user: name=cbt password=demo
+      mysql_user:
+        name: cbt 
+        password: demo
+
       mysql_root_password: Password123!
       mysql_db:
         name: cbtdata
