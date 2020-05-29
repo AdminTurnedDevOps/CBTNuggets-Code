@@ -13,11 +13,9 @@
     - name: Install pymysql
       shell: apt install python-pymysql
 
-      mysql_user:
-        name: "${{ mysql_user_name }}"
-        password: "${{ mysql_user_password }}"
-
-      mysql_root_password: Password123!
+    - name: Install MySQL
+      shell: apt install mysql-server
+      
       mysql_db:
         name: cbtdata
         config_file: ~/.my.cnf
