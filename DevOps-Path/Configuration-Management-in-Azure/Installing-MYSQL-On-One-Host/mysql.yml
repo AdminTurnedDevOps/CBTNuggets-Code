@@ -15,14 +15,16 @@
   - name: Install MySQL
     shell: apt install mysql-server -y
 
-  - name: MySQL 
-    mysql_db:
-      name: cbtdata
-      state: present
-  
   - name: Configure MySQL users
     mysql_user:
       name: "${{ mysql_user }}"
       host: "%"
-      password: "${{ mysql_password }}"
-      priv: "example_db.*:ALL"
+      priv: '*.*:ALL'
+      state: present
+
+  - name: MySQL 
+    mysql_db:
+      login_user: "${{ mysql_user }}"
+      login_password: "${{ mysql_password }}"
+      name: cbtdata
+      state: present
