@@ -7,24 +7,30 @@
   vars:
     mysql_user: cbt
     mysql_password: root
+    root_password: W3lcome12!@
 
   tasks:
   - name: Install pymysql
     shell: apt install python-pymysql -y
 
   - name: Install MySQL
-    shell: apt install mysql-server -y
-
-  - name: Configure MySQL users
-    mysql_user:
-      name: "${{ mysql_user }}"
-      host: "%"
-      priv: '*.*:ALL'
+    apt:
+      name: mysql-server
       state: present
+
+  - name: copy cnf
+    copy: src=.my.cnf dest=~/.my.cnf mode=0644
 
   - name: MySQL 
     mysql_db:
       login_user: "${{ mysql_user }}"
       login_password: "${{ mysql_password }}"
       name: cbtdata
+      state: present
+
+  - name: Configure MySQL users
+    mysql_user:
+      name: "${{ mysql_user }}"
+      host: "%"
+      priv: '*.*:ALL'
       state: present
