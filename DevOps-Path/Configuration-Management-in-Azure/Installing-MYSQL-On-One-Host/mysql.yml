@@ -23,11 +23,6 @@
       dest: ~/.my.cnf
       mode: 0644
 
-  - name: MySQL 
-    mysql_db:
-      name: cbtdata
-      state: present
-
   - name: Configure MySQL users
     mysql_user:
       name: "${{ mysql_user }}"
