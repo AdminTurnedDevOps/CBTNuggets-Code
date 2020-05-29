@@ -13,12 +13,10 @@
   tasks:
     - name: Install pymysql
       shell: apt install python-pymysql
-    
-      mysql_user: name=cbt password=demo
-    
-      mysql_root_password: Password123!
 
     - name: Create a new database called cbtdata
+      mysql_user: name=cbt password=demo
+      mysql_root_password: Password123!
       mysql_db:
         name: cbtdata
         config_file: ~/.my.cnf
