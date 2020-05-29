@@ -10,10 +10,10 @@
 
   tasks:
   - name: Install pymysql
-    shell: apt install python-pymysql
+    shell: apt install python-pymysql -y
 
   - name: Install MySQL
-    shell: apt install mysql-server
+    shell: apt install mysql-server -y
 
   - name: MySQL 
     mysql_db:
