@@ -23,9 +23,5 @@
       dest: ~/.my.cnf
       mode: 0644
 
-  - name: Configure MySQL users
-    mysql_user:
-      name: "${{ mysql_user }}"
-      host: "%"
-      priv: '*.*:ALL'
-      state: present
+  - name: Create database
+    shell: mysql -u root -e "create database cbtdata;"
