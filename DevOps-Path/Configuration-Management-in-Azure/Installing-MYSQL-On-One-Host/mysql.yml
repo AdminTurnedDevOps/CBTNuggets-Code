@@ -1,0 +1,27 @@
+# Python MySQL must be installed on the remote hosts. To install:
+# apt-get install python-pymysql
+
+---
+- hosts: sqlserver01
+  become: true
+  vars:
+    mysql_user: root
+    mysql_password: root
+
+  tasks:
+  - name: Install pymysql
+    shell: apt install python-pymysql -y
+
+  - name: Install MySQL
+    apt:
+      name: mysql-server
+      state: present
+
+  - name: copy cnf
+    copy: 
+      src: my.cnf
+      dest: ~/.my.cnf
+      mode: 0644
+
+  - name: Create database
+    shell: mysql -u root -e "create database cbtdata;"
