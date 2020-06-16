@@ -1,3 +1,13 @@
+terraform {
+  backend "azurerm" {
+    resource_group_name = "CBTAzure"
+    storage_account_name = "storageaccountcbtaza341"
+    container_name = "azure-webjobs-hosts"
+    key = "terraform.state"
+  }
+}
+
+
 provider "azurerm" {
     version = "2.0.0"
     subscription_id = var.subscriptionID
