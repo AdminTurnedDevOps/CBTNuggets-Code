@@ -21,6 +21,6 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'apply'
-    workingDirectory: 'Continuous Integration and Continuous Deployment (CICD) with Azure DevOps/vnet'
+    workingDirectory: 'DevOps-Path/Continuous Integration and Continuous Deployment (CICD) with Azure DevOps/vnet/'
     commandOptions: '-var="subscriptionID=$(subscriptionID" -var="location=$(location) -var="resourceGroupName=$(resourceGroupName")"'
     environmentServiceNameAzureRM: 'Mike-Pay-As-You-Go(220284d2-6a19-4781-87f8-5c564ec4fec9)'
