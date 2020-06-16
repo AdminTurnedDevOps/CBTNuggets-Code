@@ -5,11 +5,6 @@ provider "azurerm" {
     features {}
 }
 
-resource "azurerm_resource_group" "CBTDevRG" {
-    name = var.resourceGroupName
-    location = var.location
-}
-
 resource "azurerm_virtual_network" "CBTDev-vnet" {
   name                = "CBTDev-vnet"
   location            = var.location
