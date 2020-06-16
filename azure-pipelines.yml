@@ -10,7 +10,8 @@ steps:
   inputs:
     provider: 'azurerm'
     command: 'init'
-    workingDirectory: 'DevOps-path/Continuous Integration and Continuous Deployment (CICD) with Azure DevOps'
+    workingDirectory: 'DevOps-path/Continuous Integration and Continuous Deployment (CICD) with Azure DevOps/vnet'
+    commandOptions: '-var="subscriptionID=$(subscriptionID" -var="location=$(location) -var="resourceGroupName=$(resourceGroupName")"'
     backendServiceArm: 'Mike-Pay-As-You-Go(220284d2-6a19-4781-87f8-5c564ec4fec9)'
     backendAzureRmResourceGroupName: 'CBTAzure'
     backendAzureRmStorageAccountName: 'storageaccountcbtaza341'
