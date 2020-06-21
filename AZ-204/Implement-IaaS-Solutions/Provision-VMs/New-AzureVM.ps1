@@ -3,19 +3,22 @@ using namespace System.Management.Automation;
 function New-AzureVM {
     [cmdletbinding(ConfirmImpact = 'low')]
     param(
-        [parameter(Mandatory,
+        [parameter(Position = 0,
+            Mandatory,
             ValueFromPipeline,
             HelpMessage = 'Enter VM name')]
         [alias('VM', 'Name')]
         [ValidateNotNullOrEmpty()]
         [string]$vmName,
 
-        [parameter(HelpMessage = 'Enter Region name')]
+        [parameter(Position = 1,
+            HelpMessage = 'Enter Region name')]
         [alias('location')]
         [ValidateNotNullOrEmpty()]
         [string]$region,
 
-        [parameter(HelpMessage = 'Enter Ports')]
+        [parameter(Position = 2,
+            HelpMessage = 'Enter Ports')]
         [ValidateNotNullOrEmpty()]
         [string[]]$ports = ('22', '443')
     )
