@@ -1,5 +1,5 @@
 # Create an Azure Container Registry (ACR)
-az acr create -n cbttest
+az acr create -n cbttest -g CBTAzure --sku Standard
 
 # Log into the ACR
 az acr login --name cbttest
