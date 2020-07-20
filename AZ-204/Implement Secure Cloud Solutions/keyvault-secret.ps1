@@ -5,8 +5,8 @@
 
 function New-Secret {
     param(
-        [string]$keyVaultName,
-        [string]$secretName
+        [string]$vaultName = 'cbtkeyvault92',
+        [string]$secretName = 'ThisIsMyTestSecret92'
     )
     
     $pass = Read-Host -AsSecureString 'Input Secret Value...'
