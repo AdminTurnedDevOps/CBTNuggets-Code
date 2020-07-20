@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>cf3fec34-2236-4e8c-8415-adbc19931e4b</UserSecretsId>
+    <ApplicationInsightsResourceId>/subscriptions/220284d2-6a19-4781-87f8-5c564ec4fec9/resourceGroups/AZ-400/providers/microsoft.insights/components/apitest</ApplicationInsightsResourceId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.13.1" />
+    <PackageReference Include="Microsoft.ApplicationInsights.Web" Version="2.13.1" />
+  </ItemGroup>
+
+
+</Project>

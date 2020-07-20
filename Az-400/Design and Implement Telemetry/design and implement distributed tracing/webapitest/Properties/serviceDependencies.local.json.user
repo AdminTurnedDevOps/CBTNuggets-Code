@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "appInsights1": {
+      "restored": true,
+      "restoreTime": "2020-07-02T15:37:49.9822997Z"
+    }
+  },
+  "parameters": {
+    "resourceGroup": {
+      "Type": "resourceGroup",
+      "Value": "AZ-400"
+    },
+    "subscriptionId": {
+      "Type": "subscription",
+      "Value": "220284d2-6a19-4781-87f8-5c564ec4fec9"
+    }
+  }
+}

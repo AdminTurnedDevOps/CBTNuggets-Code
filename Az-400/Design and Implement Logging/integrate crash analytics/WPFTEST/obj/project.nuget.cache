@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "wr3m/XTlVHOo5cGfdkomCuYMVaRT2/R9qhiecv7GJ0kimSUyiB+Wm5ljagdlTGffe5Y22l2nHRr3aM3doy7myw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\mleva\\CSharpRepos\\WPFTEST\\WPFTEST.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\mleva\\.nuget\\packages\\microsoft.appcenter\\3.2.2\\microsoft.appcenter.3.2.2.nupkg.sha512",
+    "C:\\Users\\mleva\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\mleva\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.2\\sqlitepclraw.bundle_green.2.0.2.nupkg.sha512",
+    "C:\\Users\\mleva\\.nuget\\packages\\sqlitepclraw.core\\2.0.2\\sqlitepclraw.core.2.0.2.nupkg.sha512",
+    "C:\\Users\\mleva\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.2\\sqlitepclraw.lib.e_sqlite3.2.0.2.nupkg.sha512",
+    "C:\\Users\\mleva\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.2\\sqlitepclraw.provider.dynamic_cdecl.2.0.2.nupkg.sha512",
+    "C:\\Users\\mleva\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\mleva\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\mleva\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\mleva\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}
